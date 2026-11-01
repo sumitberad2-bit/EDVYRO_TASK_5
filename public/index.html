@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover verified internship opportunities and apply through one simple, accessible portal.">
+  <meta name="theme-color" content="#101827"><title>LaunchBoard — Find your next opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap">
+    <a class="brand" href="#top" aria-label="LaunchBoard home"><span class="brand-mark">L</span><span>launch<span class="brand-light">board</span></span></a>
+    <nav aria-label="Main navigation"><a href="#opportunities">Opportunities</a><a href="#how-it-works">How it works</a></nav>
+    <a class="nav-cta" href="#opportunities">Explore roles <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main">
+    <section class="hero" id="top"><div class="hero-grid">
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Small steps.<br><span>Big careers.</span></h1>
+        <p class="hero-lede">Find internships where curiosity turns into real-world experience. Explore opportunities built for your next move.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#opportunities">Explore opportunities <span aria-hidden="true">→</span></a><a class="text-link" href="#how-it-works">How it works <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><i>A</i><i>R</i><i>S</i><i>+</i></div><span>Made for curious minds and future builders</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a career growth dashboard"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="floating-card card-top"><span class="mini-icon">✦</span><div><b>Find your fit</b><small>Opportunities that move you</small></div></div><div class="dashboard-card"><div class="dash-top"><span>YOUR CAREER PATH</span><span class="live-dot">● LIVE</span></div><div class="dash-title">Ready to grow?</div><div class="dash-sub">Your next opportunity is closer than you think.</div><div class="progress-line"><span></span></div><div class="dash-bottom"><span>Explore · Learn · Build</span><b>01 / 03</b></div></div><div class="floating-card card-bottom"><span class="sparkle">✳</span><div><b>Keep moving forward</b><small>One application at a time</small></div></div></div>
+    </div><div class="hero-stats"><div><strong>01</strong><span>Discover opportunities</span></div><div><strong>02</strong><span>Show what you can do</span></div><div><strong>03</strong><span>Start your journey</span></div></div></section>
+    <section class="opportunities section-wrap" id="opportunities"><div class="section-heading"><div><div class="eyebrow eyebrow-dark">THE OPPORTUNITY BOARD</div><h2>Find a role that <span>fits you.</span></h2><p>Explore handpicked opportunities and take the next step in your career.</p></div><div class="result-count" id="result-count" aria-live="polite">Loading roles…</div></div>
+      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search opportunities</span><input id="search" type="search" placeholder="Search role, company or skill…"></label><label class="select-wrap"><span class="sr-only">Filter by category</span><select id="category"><option>All</option><option>Engineering</option><option>Design</option><option>Data</option></select></label><label class="select-wrap"><span class="sr-only">Filter by work mode</span><select id="mode"><option>All</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label></div>
+      <div class="job-grid" id="job-grid"><div class="loading-card">Finding opportunities for you…</div></div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No matching roles yet</h3><p>Try changing your search or filters.</p><button class="button button-secondary" id="clear-filters">Clear filters</button></div>
+    </section>
+    <section class="how-section" id="how-it-works"><div class="section-wrap how-inner"><div class="eyebrow">A SIMPLE WAY FORWARD</div><h2>Your next step,<br><span>made simple.</span></h2><div class="steps"><article><span>01</span><h3>Find your direction</h3><p>Search roles by skill, interest, and work style.</p></article><article><span>02</span><h3>Make your move</h3><p>Share your details and tell a team what you bring.</p></article><article><span>03</span><h3>Keep growing</h3><p>Take the experience into whatever comes next.</p></article></div></div></section>
+    <section class="closing section-wrap"><div><div class="eyebrow eyebrow-dark">YOUR FUTURE IS A WORK IN PROGRESS</div><h2>Build experience.<br><span>Build confidence.</span></h2></div><a class="button button-primary" href="#opportunities">Find your opportunity <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer><div class="footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">L</span><span>launch<span class="brand-light">board</span></span></a><p>Designed to help the next generation get moving.</p><span>© <span id="year"></span> LaunchBoard · EdVyro Capstone</span></div></footer>
+  <dialog id="application-dialog" aria-labelledby="dialog-title"><form id="application-form" novalidate><div class="dialog-head"><div><div class="eyebrow eyebrow-dark">TAKE THE NEXT STEP</div><h2 id="dialog-title">Apply for this role</h2><p id="selected-role"></p></div><button class="icon-button" type="button" id="close-dialog" aria-label="Close application form">×</button></div>
+    <input type="hidden" id="internship-id" name="internshipId"><div class="form-grid"><label>Full name <input name="fullName" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your full name"><small class="field-error" data-error="fullName"></small></label><label>Email address <input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com"><small class="field-error" data-error="email"></small></label><label>Phone number <input name="phone" required maxlength="20" autocomplete="tel" placeholder="+91 98765 43210"><small class="field-error" data-error="phone"></small></label><label>Your skills <input name="skills" required minlength="2" maxlength="300" placeholder="JavaScript, React, teamwork"><small class="field-error" data-error="skills"></small></label><label class="full-field">A short note <textarea name="coverNote" rows="3" maxlength="1000" placeholder="Tell us why this opportunity interests you…"></textarea><small class="field-error" data-error="coverNote"></small></label></div><div class="form-status" id="form-status" role="status" aria-live="polite"></div><button class="button button-primary submit-button" type="submit">Send application <span aria-hidden="true">→</span></button><p class="privacy-note">Your details are used only to process this application.</p></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><script src="/app.js" defer></script>
+</body></html>
